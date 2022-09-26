@@ -20,18 +20,21 @@ function path($go)
     location.replace('/ODC%20BackEnd/lawer_office/$go')
     </script>";
 }
+
 function loginauth()
 {
     if (!isset($_SESSION['lowar']) && !$_SESSION['admin']) {
         path("auth/login.php");
     }
 }
+
 function auth()
 {
     if (!isset($_SESSION['admin'])) {
         path("auth/login.php");
     }
 }
+
 function admin_auth()
 {
     if ($_SESSION['admin']) {
