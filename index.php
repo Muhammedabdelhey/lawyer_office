@@ -8,6 +8,7 @@ include './genral/functions.php';
 loginauth();
 $slelct = "SELECT * FROM `articales` ORDER BY update_time desc";
 $query = mysqli_query($connication, $slelct);
+
 ?>
 <div>
     <br>
@@ -16,14 +17,17 @@ $query = mysqli_query($connication, $slelct);
     </div>
 
 
-    <div class="container " >
+    <div class="container ">
         <div class="row">
             <div class="col-md-7 mt-4 mx-auto">
-                <?php foreach ($query as $data) { ?>
+                <?php foreach ($query as $data) {
+                    $image = $data['image']
+                ?>
                     <div class="card text-white bg-dark mb-2 " style="width: 40rem;">
                         <div class="card-body ">
                             <div class="card-header">
                                 <div class="media ">
+                                    <img src="<?= $image ?>" class="mr-3 rounded-circle" height="40" width="50" alt="...">
                                     <div class="media-body">
                                         <h6 class="text-light"><?= $data['auther'] ?></h6>
                                     </div>

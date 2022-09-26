@@ -10,10 +10,12 @@ if (isset($_POST["insert"])) {
     if(isset($_SESSION['admin'])){
         $auther=$_SESSION['admin']['name'];
         $auther_image=$_SESSION['admin']['image'];
+        $auther_image="/ODC BackEnd/lawer_office/admin".$auther_image;
     }
     else if(isset($_SESSION['lowar'])){
         $auther=$_SESSION['lowar']['name'];
         $auther_image=$_SESSION['lowar']['image'];
+        $auther_image="/ODC BackEnd/lawer_office/lawyer".$auther_image;
     }
     $description=$_POST['description'];
     // Image code

@@ -44,11 +44,14 @@ if (isset($_GET['delete'])) {
 <div class="container-md ">
     <div class="row">
         <div class="col-md-7 mt-5 mx-auto">
-            <?php foreach ($query as $data) { ?>
+            <?php foreach ($query as $data) {
+                $uimage = $data['image']
+            ?>
                 <div class="card text-white bg-dark mb-2 " style="width: 40rem;">
                     <div class="card-body ">
                         <div class="card-header">
                             <div class="media ">
+                                <img src="<?= $uimage ?>" class="mr-3 rounded-circle" height="40" width="50" alt="...">
                                 <div class="media-body">
                                     <h6 class="text-light"><?= $data['auther'] ?></h6>
                                 </div>
@@ -58,11 +61,11 @@ if (isset($_GET['delete'])) {
                         <p class="card-text"><?= $data['description'] ?></p>
                     </div>
                     <img class="card-img-bottom" src="/ODC BackEnd/lawer_office/article/<?= $data['post_image'] ?>" alt="Card image cap">
-                
-                <div class="card-footer d-flex justify-content-center">
-                    <a href="list_article.php?delete=<?= $data["id"] ?>" class="btn btn-danger ">delete</a>
-                    <a href="update_article.php?edit=<?= $data["id"] ?>" class="btn btn-info mx-5">edite</a>
-                </div>
+
+                    <div class="card-footer d-flex justify-content-center">
+                        <a href="list_article.php?delete=<?= $data["id"] ?>" class="btn btn-danger ">delete</a>
+                        <a href="update_article.php?edit=<?= $data["id"] ?>" class="btn btn-info mx-5">edite</a>
+                    </div>
                 </div>
 
                 <br>
