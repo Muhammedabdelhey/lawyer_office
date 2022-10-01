@@ -60,7 +60,7 @@ if (isset($_GET['logout'])) {
 
         </ul>
         <div class="media mx-5">
-            <img src="/ODC BackEnd/lawer_office/<?= $image ?>" class="mr-3 rounded-circle" height="40" width="50" alt="...">
+            <img src="/ODC BackEnd/lawer_office/<?= $image ?>" class="mr-3 rounded-circle" height="35" width="45" alt="...">
             <div class="media-body">
                 <h6 class="text-light"><?= $name ?></h6>
             </div>
